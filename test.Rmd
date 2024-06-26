@@ -1,5 +1,10 @@
 ---
 title: "test_rmd"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+    encoding=encoding,
+    output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Danielle Arsenault"
 date: "2024-06-26"
 output: html_document
